@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    
-
     public void CompleteLevel()
     {
         completeLevelUI.SetActive(true);
