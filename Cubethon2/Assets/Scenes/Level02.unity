@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0828fc1b7e79345826fbd322c6f83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 2142911843}
   offset: {x: 0, y: 3, z: -8}
 --- !u!1 &963634303
 GameObject:
@@ -3136,7 +3136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3260efa3e8c9244a4a694b9f8e1845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 2142911843}
   scoreText: {fileID: 1590986570}
 --- !u!114 &1590986570
 MonoBehaviour:
@@ -3654,10 +3654,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2358411436552009604, guid: 060d38e97b7f0b04c9e505b0085bd283, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 325522818}
     - target: {fileID: 4535226994136833643, guid: 060d38e97b7f0b04c9e505b0085bd283, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5210956981040628688, guid: 060d38e97b7f0b04c9e505b0085bd283, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 325522818}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3685,6 +3693,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2782a9e36ecd04baff7a8d3d9a69a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2142911843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 164739030849201047, guid: 060d38e97b7f0b04c9e505b0085bd283, type: 3}
+  m_PrefabInstance: {fileID: 2142911835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

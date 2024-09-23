@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private bool isReplaying;
+
     public PlayerMovement movement;
     public InputHandler inputHandler;
     public GameObject completeLevelUI;
@@ -19,11 +21,15 @@ public class GameManager : MonoBehaviour
     {
         if (CommandLog.recordedCommands.Count > 0)
         {
+            isReplaying = true;
             ReplayText.SetActive(true);
             inputHandler.StartReplay();
         }
         else if(CommandLog.recordedCommands.Count <= 0)
+        {
+            isReplaying = false;
             inputHandler.startRecording();
+        }
 
     }
 
@@ -41,6 +47,10 @@ public class GameManager : MonoBehaviour
         movement.enabled = false;
         Debug.Log("Game Ended");
         Invoke("Restart", restartDelay);
+
+        if (isReplaying)
+            CommandLog.recordedCommands.Clear();
+
     }
 
     void Restart()

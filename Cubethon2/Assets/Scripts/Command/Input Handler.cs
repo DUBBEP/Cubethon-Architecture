@@ -29,7 +29,7 @@ public class InputHandler : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
                 _invoker.ExecuteCommand(_buttonA);
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
                 _invoker.ExecuteCommand(_buttonD);
         }
     }

@@ -7,6 +7,7 @@ public class LevelComplete : MonoBehaviour
 {
     public void LoadNextLevel()
     {
+        CommandLog.recordedCommands.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
