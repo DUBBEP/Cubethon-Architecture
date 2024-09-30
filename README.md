@@ -5,7 +5,7 @@
 
  1. Event is triggered upon collecting a pickup
 
- 2. Event is triggered when player collides with obstacle causing them rotate
+ 2. Event is triggered when player collides with obstacle which has the player spin out.
 
  3. Event is triggered when player reaches a score of 800
 
