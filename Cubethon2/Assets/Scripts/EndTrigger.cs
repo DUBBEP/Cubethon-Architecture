@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EndTrigger : MonoBehaviour
 {
     public GameManager manager;
 
-    private void OnTriggerEnter()
+
+    private void OnTriggerEnter(Collider other)
     {
-        manager.CompleteLevel();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            manager.CompleteLevel();
+        }
     }
 }
