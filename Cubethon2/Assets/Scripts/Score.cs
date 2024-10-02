@@ -14,14 +14,19 @@ public class Score : MonoBehaviour
 
     public static Score instance;
 
+    bool milestoneReached = false;
+
     private void Awake()
     {
         instance = this;
     }
     void Update()
     {
-        if (Player.position.z > 800)
+        if (Player.position.z > 800 && milestoneReached == false)
+        {
             OnScoreMilestone?.Invoke();
+            milestoneReached = true;
+        }
 
         scoreText.text = Player.position.z.ToString("0");
     }
